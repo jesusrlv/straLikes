@@ -133,8 +133,8 @@ function uploadVideo(idDoc,idUsr){
 
           Swal.fire({
             icon: 'success',
-            imageUrl: '../../img/logo_pej2025_01.png',
-            imageHeight: 200,
+            imageUrl: '../../img/starlikes.png',
+            imageHeight: 400,
             title: 'Video cargado',
             text: 'Proceso correcto',
             confirmButtonColor: '#3085d6',
@@ -176,8 +176,8 @@ function editVideo(idDoc,idUsr){
   
             Swal.fire({
               icon: 'success',
-              imageUrl: '../../img/logo_pej2025_01.png',
-              imageHeight: 200,
+              imageUrl: '../../img/starlikes.png',
+              imageHeight: 400,
               title: 'Video actualizado',
               text: 'Proceso correcto',
               confirmButtonColor: '#3085d6',
@@ -188,8 +188,8 @@ function editVideo(idDoc,idUsr){
         else{
             Swal.fire({
               icon: 'error',
-              imageUrl: '../../img/logo_pej2025_01.png',
-              imageHeight: 200,
+              imageUrl: '../../img/starlikes.png',
+              imageHeight: 400,
               title: 'Video no actualizado',
               text: 'Proceso incorrecto',
               confirmButtonColor: '#3085d6',

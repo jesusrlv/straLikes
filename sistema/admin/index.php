@@ -35,7 +35,7 @@ $categoria = $_SESSION['categoria'];
     <meta name="INJUVENTUD" content="Consejo Juvenil">
     <meta name="" content="">
     <link rel="icon" type="image/png" href="../../img/icon.ico" sizes="22x21">
-    <title>Perfil Admin | PEJ2026</title>
+    <title>Perfil Admin | Starlikes</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/album/">
 
@@ -131,7 +131,7 @@ $categoria = $_SESSION['categoria'];
         background-color: rgba(122, 205, 228, 0.63);
       }
       #imgPortrait{
-        background-image: url('../../img/fondo_pej2026.jpg');
+        background-image: url('../../img/fondo_starlikes_3.jpg');
 
         object-fit: cover;
         background-position: auto 100%; /* Center the image */
@@ -194,21 +194,10 @@ $categoria = $_SESSION['categoria'];
       }
       /* buttons hover */
 
-      /* #botonesFiles:hover {
-    
-        box-shadow: 0 10px 20px rgba(0,0,0,.1), 0 4px 8px rgba(0,0,0,.06);
-        transform: scale(1.03);
-        transition: width 0.8s, height 0.8s, transform 0.3s;
-        
-      } */
       .card{
         box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
         transition: all 0.3s ease;
       }
-      /* .card:hover{
-        transform: scale(1.05);
-        box-shadow: 0 10px 20px rgba(0,0,0,.12), 0 4px 8px rgba(0,0,0,.06);
-      } */
      
       /* ESTILOS NUEVOS PARA DASHBOARD */
       .stats-card {
@@ -325,7 +314,7 @@ $categoria = $_SESSION['categoria'];
     <div class="container">
       <a href="#" class="navbar-brand d-flex align-items-center">
         <img src="../../img/logo_injuventud_0.png" width="20" alt="" class="me-1">
-        <strong class="text-light" id="texto_">ADMINISTRADOR | Premio Estatal de la Juventud 2026</strong>
+        <strong class="text-light" id="texto_">ADMINISTRADOR | Starlikes</strong>
       </a>
       <a href="prcd/sort.php" type="button" class="btn btn-sm btn-outline-light"><i class="bi bi-door-open"></i> Salir</a>
     </div>
@@ -406,12 +395,7 @@ $categoria = $_SESSION['categoria'];
           </div>
         </div>
       </div>
-      <!-- <div class="col-lg-4">
-        <div class="card p-3 border-0 shadow-sm">
-          <h6 class="fw-bold mb-3"><i class="bi bi-tags"></i> Participantes por categoría</h6>
-          <canvas id="categoriaChart" style="max-height: 250px;"></canvas>
-        </div>
-      </div> -->
+     
       <div class="col-lg-6">
         <div class="card p-3 border-0 shadow-sm">
           <h6 class="fw-bold mb-3"><i class="bi bi-clipboard-data"></i> Estado de expedientes</h6>
@@ -690,16 +674,15 @@ $categoria = $_SESSION['categoria'];
 
 </main>
 
-<footer class="text-light py-5" style="background:rgb(122, 205, 228)">
+<footer class="text-light py-5 bg-dark">
 <div class="container">
     <div>
       <div class="row">
         <div class="col-sm-3 col-md-6 col-lg-4 mt-2">
-          <p class="mb-0 text-center"><img src="../../img/logo_white_02.png"  width="180" alt=""></p>
           <p class="mb-0 mt-1 text-center"><small>&copy; Desarrollo:<br> <strong class="text-light">Tecnologías de la Información | INJUVENTUD</strong></small></p>
         </div>
         <div class="col-sm-3 col-md-6 col-lg-4 mt-2 text-center">
-          <img src="../../img/logo_pej2025_01.png" width="180" alt="">
+          <img src="../../img/logo_white_02.png"  width="180" alt="">
         </div>
         <div class="col-sm-3 col-md-6 col-lg-4 mt-2">
           <p class="float-end mb-1 text-center">

@@ -13,10 +13,10 @@ $perfil = $_SESSION['perfil'];
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta name="INJUVENTUD" content="PEJ2026">
+    <meta name="INJUVENTUD" content="Starlikes">
     <meta name="" content="">
     <link rel="icon" type="image/png" href="../../img/icon.ico" sizes="22x21">
-    <title>Perfil Admin | PEJ2026</title>
+    <title>Perfil Admin | Starlikes</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/album/">
 
@@ -122,13 +122,6 @@ $perfil = $_SESSION['perfil'];
       }
       /* buttons hover */
 
-      /* #botonesFiles:hover {
-    
-        box-shadow: 0 10px 20px rgba(0,0,0,.1), 0 4px 8px rgba(0,0,0,.06);
-        transform: scale(1.03);
-        transition: width 0.8s, height 0.8s, transform 0.3s;
-        
-      } */
       .card{
         box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
       }
@@ -173,7 +166,7 @@ $perfil = $_SESSION['perfil'];
     <div class="container">
       <a href="#" class="navbar-brand d-flex align-items-center">
         <img src="../../img/logo_injuventud_0.png" width="20" alt="" class="me-1">
-        <strong class="text-light" id="texto_">ADMINISTRADOR | Premio Estatal de la Juventud 2026</strong>
+        <strong class="text-light" id="texto_">ADMINISTRADOR | Starlikes</strong>
       </a>
       <a href="prcd/sort.php" type="button" class="btn btn-sm btn-outline-light"><i class="bi bi-door-open"></i> Salir</a>
     </div>
@@ -205,10 +198,7 @@ $perfil = $_SESSION['perfil'];
       </div>
       
       <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
-      <!-- <div class="input-group mb-3">
-        <span class="input-group-text" id="basic-addon1"><i class="bi bi-search"></i></span>
-        <input type="text" class="form-control" placeholder="Buscar ..." aria-label="Buscar ..." aria-describedby="basic-addon1" id="myInput">
-      </div> -->
+      
             <?php
             include('query/lista_postulantes_completados2.php');
             ?>
@@ -219,21 +209,18 @@ $perfil = $_SESSION['perfil'];
     </div>
   </div>
 
-  
-
 </main>
 
-<footer class="text-light py-5" style="background-color: rgba(122, 205, 228, 0.929);">
+<footer class="text-light py-5 bg-dark">
   <div class="container">
     <div>
       <div class="row">
         <div class="col-sm-3 col-md-6 col-lg-4 mt-2">
-          <p class="mb-0 text-center"><img src="../../img/logo_white_02.png"  width="180" alt=""></p>
           <p class="mb-0 mt-1 text-center"><small>&copy; Desarrollo:<br> <strong class="text-light">Tecnologías de la Información | INJUVENTUD</strong></small></p>
           <!-- <p class="mb-0 text-center"><small><a href="/" style="text-decoration: none;" class="text-light">Gobierno del estado de Zacatecas</a>.</small></p> -->
         </div>
         <div class="col-sm-3 col-md-6 col-lg-4 mt-2 text-center">
-          <img src="../../img/logo_pej2025_01.png" width="180" alt="">
+          <img src="../../img/logo_white_02.png"  width="180" alt="">
         </div>
         <div class="col-sm-3 col-md-6 col-lg-4 mt-2">
           <p class="float-end mb-1 text-center">

@@ -15,10 +15,10 @@ include('query/name.php');
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta name="INJUVENTUD" content="PEJ 2026">
+    <meta name="INJUVENTUD" content="Starlikes">
     <meta name="" content="">
     <link rel="icon" type="image/png" href="../../img/icon.ico" sizes="22x21">
-    <title>Perfil Jurado | PEJ 2025</title>
+    <title>Perfil Jurado | Starlikes</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/album/">
 
@@ -45,10 +45,10 @@ include('query/name.php');
         font-family: 'Montserrat', sans-serif;
       }
       #colorRounded{
-        background-color: rgba(122, 205, 228, 0.929);
+        background-color: rgba(122, 205, 228, 0.6);
       }
       #imgPortrait{
-        background-image: url('../../img/fondo_pej2026.jpg');
+        background-image: url('../../img/fondo_starlikes_3.jpg');
 
         object-fit: cover;
         background-position: auto 100%; /* Center the image */
@@ -160,7 +160,7 @@ include('query/name.php');
     <div class="container">
       <a href="#" class="navbar-brand d-flex align-items-center">
         <img src="../../img/logo_injuventud_0.png" width="20" alt="" class="me-1">
-        <strong>JURADO | PEJ 2026</strong>
+        <strong>JURADO | Starlikes</strong>
       </a>
       <a href="prcd/sort.php" type="button" class="btn btn-sm btn-outline-light"><i class="bi bi-door-open"></i> Salir</a>
     </div>
@@ -173,10 +173,9 @@ include('query/name.php');
 
 
 <section class="text-center container">
-    <!-- <div class="row py-lg-5"  style="background-image: url('../../img/logo_consejo_05.png')"> -->
     <div class="row py-lg-5" >
       <div class="col-lg-6 col-md-8 mx-auto rounded p-2" id="colorRounded">
-      <h1 class="fw-light"><img src="../../img/logo_pej2025_01.png" alt="" width="100%" style="padding:10px; border-radius: 15px;"></h1>
+      <h1 class="fw-light"><img src="../../img/starlikes.png" alt="" width="100%" style="padding:10px; border-radius: 15px;"></h1>
         <h2 class="fw-bold" style="color:white">Bienvenid@</h2>
         <h2 class="fw-bold" style="color:white"><i class="bi bi-person-circle"></i></h2>
 
@@ -184,7 +183,7 @@ include('query/name.php');
 	<h5 class="fw-bold" style="color:white">Mesa: <output id="categoriaOut"></h5>
 
         <p id="resultSpan"></p>
-        <p class="lead text-light mt-2">Sistema de calificación del PEJ en su edición 2026.</p>
+        <p class="lead text-light mt-2">Sistema de calificación de Starlikes.</p>
         <p>
           <hr class="text-secondary">
           <a href="#seccion_convocatoria" class="btn btn-primary my-2"><i class="bi bi-clipboard-data-fill"></i> Dashboard</a>
