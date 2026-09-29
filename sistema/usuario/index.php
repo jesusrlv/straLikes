@@ -23,10 +23,10 @@ else{
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
-    <meta name="INJUVENTUD" content="Consejo Juvenil">
+    <meta name="INJUVENTUD" content="Starlikes">
     <meta name="" content="">
     <link rel="icon" type="image/png" href="../../img/icon.ico" sizes="22x21">
-    <title>Perfil Usuario | PEJ2026</title>
+    <title>Perfil Usuario | Starlikes</title>
 
     <link rel="canonical" href="https://getbootstrap.com/docs/5.3/examples/album/">
 
@@ -53,10 +53,11 @@ else{
         font-family: 'Montserrat', sans-serif;
       }
       #colorRounded{
-        background-color: rgba(122, 205, 228, 0.929);
+        /* background-color: rgba(122, 205, 228, 0.929); */
+        background-color: rgba(20, 51, 106, 0.6);
       }
       #imgPortrait{
-        background-image: url('../../img/fondo_pej2026.jpg');
+        background-image: url('../../img/fondo_starlikes_1.jpg');
 
         object-fit: cover;
         background-position: 80% 100%; /* Center the image */
@@ -151,7 +152,8 @@ else{
        
         }
         #colorRounded{
-          background-color: rgba(61, 42, 93, 0.9);
+          /* background-color: rgba(61, 42, 93, 0.9); */
+          background-color: rgba(20, 51, 106, 0.9);
           border-radius:0px;
         }
         #textPortada{
@@ -170,7 +172,7 @@ else{
     <div class="container">
       <a href="#" class="navbar-brand d-flex align-items-center">
         <img src="../../img/logo_injuventud_0.png" width="20" alt="" class="me-1">
-        <strong id="textPortada">POSTULANTE | PREMIO ESTATAL DE LA JUVENTUD 2026</strong>
+        <strong id="textPortada">POSTULANTE | Starlikes</strong>
       </a>
       <a href="prcd/sort.php" type="button" class="btn btn-sm btn-outline-light"><i class="bi bi-door-open"></i> Salir</a>
     </div>
@@ -185,14 +187,14 @@ else{
     <!-- <div class="row py-lg-5"  style="background-image: url('../../img/logo_consejo_05.png')"> -->
     <div class="row py-lg-5"  >
       <div class="col-lg-6 col-md-8 mx-auto rounded p-2" id="colorRounded">
-        <h1 class="fw-light"><img src="../../img/logo_pej2025_01.png" alt="" width="100%" style="padding:10px; border-radius: 15px;"></h1>
+        <h1 class="fw-light"><img src="../../img/starlikes.png" alt="" width="100%" style="padding:10px; border-radius: 15px;"></h1>
         <h2 class="fw-bold" style="color:white">Bienvenid@</h2>
         <h2 class="fw-bold" style="color:white"><i class="bi bi-person-circle"></i></h2>
         <h2 class="fw-bold" style="color:white"><?php echo $nombre ?></h2>
         <?php echo '<input type="text" value="'.$categoria.'" id="catCompleto" hidden>' ?>
         <h5 class="fw-bold" style="color:white">Categoría: <output id="categoriaOut"></h5>
         <p id="resultSpan"></p>
-        <p class="lead text-light mt-2">Sistema de postulación del INJUVENTUD para del Premio Estatal de la Juventud del Zacatecas en su edición 2026.</p>
+        <p class="lead text-light mt-2">Sistema de postulación del INJUVENTUD para del Premio Starlikes.</p>
         <p>
           <hr class="text-secondary">
           <a href="#seccion_documentos" class="btn btn-primary my-2"><i class="bi bi-filetype-pdf"></i> Sección de documentos</a>
@@ -238,7 +240,7 @@ else{
               <h5 class="card-title">Convocatoria</h5>
               <h6 class="card-subtitle mb-2 text-muted"><i class="bi bi-exclamation-triangle-fill text-warning"></i> Convocatoria vigente</h6>
               <p class="card-text">Convocatoria vigente acerca de la postulación al Premio Estatal de la Juventud 2026.</p>
-              <p><a href="generador_constancia.php" target="_blank" style="text-decoration:none" class="btn btn-primary" id="constanciaP" hidden> <i class="bi bi-file-earmark-richtext"></i> Constancia de participación al PEJ2026</a></p>
+              <p><a href="generador_constancia.php" target="_blank" style="text-decoration:none" class="btn btn-primary" id="constanciaP" hidden> <i class="bi bi-file-earmark-richtext"></i> Constancia de participación Starlikes</a></p>
               
             </div>
             <div class="card-footer">
@@ -270,17 +272,20 @@ else{
 
 </main>
 
-<footer class="text-light py-5" style="background:rgba(122, 205, 228, 0.929)">
+<!-- <footer class="text-light py-5" style="background:rgba(122, 205, 228, 0.929)"> -->
+<footer class="text-light py-5" style="background:rgba(61, 42, 93, 0.929)">
   <div class="container">
     <div>
       <div class="row">
         <div class="col-sm-3 col-md-6 col-lg-4 mt-2">
-          <p class="mb-0 text-center"><img src="../../img/logo_white_02.png"  width="180" alt=""></p>
+          <!-- <p class="mb-0 text-center">
+            <img src="../../img/logo_white_02.png"  width="180" alt="">
+          </p> -->
           <p class="mb-0 mt-1 text-center"><small>&copy; Desarrollo:<br> <strong class="text-light">Tecnologías de la Información | INJUVENTUD</strong></small></p>
           <!-- <p class="mb-0 text-center"><small><a href="/" style="text-decoration: none;" class="text-light">Gobierno del estado de Zacatecas</a>.</small></p> -->
         </div>
         <div class="col-sm-3 col-md-6 col-lg-4 mt-2 text-center">
-          <img src="../../img/logo_pej2025_01.png" width="180" alt="">
+          <img src="../../img/logo_white_02.png"  width="180" alt="">
         </div>
         <div class="col-sm-3 col-md-6 col-lg-4 mt-2">
           <p class="float-end mb-1 text-center">
