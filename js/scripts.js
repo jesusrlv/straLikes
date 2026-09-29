@@ -147,38 +147,14 @@ $(document).ready(function() {
             {
                 // var jsonData = JSON.parse(response);
                 var jsonData = JSON.parse(JSON.stringify(response));
- 
-                // user is logged in successfully in the back-end
-                // let's redirect
-
-    //             if (jsonData.success == "1")
-    //             {
-    //                 // location.href = 'my_profile.php';
-    //                 Swal.fire({
-    //                     icon: 'success',
-    //                     imageUrl: 'img/logo_pej2025_01.png',
-    //                     imageHeight: 200,
-    //                     title: 'CONVOCATORIA CERRADA',
-    //                     text: 'GRACIAS POR PARTICIPAR. MUCHA SUERTE ',
-    //                     confirmButtonColor: '#3085d6',
-		// 	showCancelButton: true,
-		// 	cancelButtonText: 'Constancia de participación',
-    //                     footer: 'INJUVENTUD'
-    //                 }).then((result) => {
-    // 		if (result.dismiss === Swal.DismissReason.cancel) {
-    //     		// Redirigir al hipervínculo deseado
-		// 	window.open('constancia.php', '_blank');
-    // 			}
-		// });
-    //             }
 
               if (jsonData.success == "1")
                 {
                     // location.href = 'my_profile.php';
                     Swal.fire({
                         icon: 'success',
-                        imageUrl: 'img/logo_pej2025_01.png',
-                        imageHeight: 200,
+                        imageUrl: 'img/starlikes.png',
+                        imageHeight: 400,
                         title: 'Acceso a postulante correcto',
                         text: 'Credenciales correctas',
                         confirmButtonColor: '#3085d6',
@@ -191,8 +167,8 @@ $(document).ready(function() {
                     // location.href = 'my_profile.php';
                     Swal.fire({
                         icon: 'success',
-                        imageUrl: 'img/logo_pej2025_01.png',
-                        imageHeight: 200,
+                        imageUrl: 'img/starlikes.png',
+                        imageHeight: 400,
                         title: 'Usuario Admin correcto',
                         text: 'Credenciales correctas',
                         confirmButtonColor: '#3085d6',
@@ -205,8 +181,8 @@ $(document).ready(function() {
                     // location.href = 'my_profile.php';
                     Swal.fire({
                         icon: 'success',
-                        imageUrl: 'img/logo_pej2025_01.png',
-                        imageHeight: 200,
+                        imageUrl: 'img/starlikes.png',
+                        imageHeight: 400,
                         title: 'Usuario Jurado correcto',
                         text: 'Credenciales correctas',
                         confirmButtonColor: '#3085d6',
@@ -218,9 +194,9 @@ $(document).ready(function() {
                     // location.href = 'my_profile.php';
                     Swal.fire({
                         icon: 'success',
-                        imageUrl: 'img/logo_pej2025_01.png',
-                        imageHeight: 200,
-                        title: 'Usuario Migrtante correcto',
+                        imageUrl: 'img/starlikes.png',
+                        imageHeight: 400,
+                        title: 'Usuario Migrante correcto',
                         text: 'Credenciales correctas',
                         confirmButtonColor: '#3085d6',
                         footer: 'INJUVENTUD'
@@ -231,8 +207,8 @@ $(document).ready(function() {
                     // location.href = 'my_profile.php';
                     Swal.fire({
                         icon: 'success',
-                        imageUrl: 'img/logo_pej2025_01.png',
-                        imageHeight: 200,
+                        imageUrl: 'img/starlikes.png',
+                        imageHeight: 400,
                         title: 'Usuario Notario correcto',
                         text: 'Credenciales correctas',
                         confirmButtonColor: '#3085d6',
@@ -320,8 +296,8 @@ $(document).ready(function() {
                     // location.href = 'my_profile.php';
                     Swal.fire({
                         icon: 'success',
-                        imageUrl: 'img/logo.png',
-                        imageHeight: 200,
+                        imageUrl: 'img/starlikes.png',
+                        imageHeight: 400,
                         title: 'Registro exitoso',
                         text: 'Bienvenido(a) al Sistema de Postulación PEJ2026',
                         confirmButtonColor: '#3085d6',
@@ -345,10 +321,6 @@ $(document).ready(function() {
        });
      });
 });
-
-// function alertaC(){
-//     alert("Estás seleccionando esta categoría para participar, al registrarte con esta, no podrás cambiar a otra");
-// }
 
 // REGISTRO DE USUARIOS USA
 $(document).ready(function() {
@@ -409,8 +381,8 @@ $(document).ready(function() {
                     // location.href = 'my_profile.php';
                     Swal.fire({
                         icon: 'success',
-                        imageUrl: 'img/logo.png',
-                        imageHeight: 200,
+                        imageUrl: 'img/starlikes.png',
+                        imageHeight: 400,
                         title: 'Registro exitoso (Migrante)',
                         text: 'Bienvenido(a) al Sistema de Postulación',
                         confirmButtonColor: '#3085d6',
