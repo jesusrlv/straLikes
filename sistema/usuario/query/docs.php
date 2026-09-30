@@ -23,18 +23,11 @@ while($rowQuery = $resultadoQuery ->fetch_assoc()){
         <div class="card border-danger text-light" style="height:300px; background-color: rgba(238, 73, 109, 0.9);" id="botonesFiles">
         ';
         }
-        // else if($no_resultados > 0 && $no_resultados <= $no_resultados_warning){
-        //     echo '
-        // <div class="card border-warning" style="height:300px">
-        //     ';
-        // }
         else if($no_resultados > 0){
             echo '
         <div class="card border-success  text-light" style="height:300px; background-color: #0056d1;">
             ';
         }
-
-
           echo'
             
             <div class="card-body text-justify">
@@ -70,7 +63,7 @@ while($rowQuery = $resultadoQuery ->fetch_assoc()){
               }
               else if($rowQuery['id']==7){
                 echo'
-                <a href="#" class="card-link text-light h6" style="text-decoration: none" data-bs-toggle="modal" data-bs-target="#cargarDoc'.$rowQuery['id'].'"><i class="bi bi-plus-circle"></i> Cargar links</a>';
+                <a href="#" class="card-link text-light h6" style="text-decoration: none" data-bs-toggle="modal" data-bs-target="#cargarLinks'.$rowQuery['id'].'" onclick="queryLinks('.$rowDocs['id_ext'].','.$idDoc.')"><i class="bi bi-plus-circle"></i> Cargar links</a>';
               }
               else{
                 echo'
@@ -83,6 +76,11 @@ while($rowQuery = $resultadoQuery ->fetch_assoc()){
                 echo'
             <a href="#" class="card-link text-light h6" style="text-decoration: none" data-bs-toggle="modal" data-bs-target="#editarVideo'.$rowQuery['id'].'"><i class="bi bi-pencil-square"></i> Editar video</a>
             <a href="'.$rowDocs['link'].'" target="_blank" class="card-link text-light h6" style="text-decoration: none"><i class="bi bi-eye"></i> Visualizar video</a>
+            ';
+            }
+            else if($rowQuery['id']==7){
+                echo'
+            <a href="#" class="card-link text-light h6" style="text-decoration: none" data-bs-toggle="modal" data-bs-target="#editarLinks'.$rowQuery['id'].'" onclick="queryLinks('.$rowDocs['id_ext'].','.$idDoc.')"><i class="bi bi-pencil-square"></i> Editar links</a>
             ';
             }
               else{
@@ -206,6 +204,51 @@ while($rowQuery = $resultadoQuery ->fetch_assoc()){
             </div>
           </div>
         </div>
+
+        <!-- Modal agregar links -->
+        <div class="modal fade" id="cargarLinks'.$rowQuery['id'].'" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Cargar <strong>'.$rowQuery['documento'].'</strong></h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="window.location.reload();"></button>
+              </div>
+              <div class="modal-body">
+                <input type="text" class="form-control mt-2" placeholder="Link social media" aria-label="Social media" aria-describedby="basic-addon1" id="linkSocial'.$idDoc.'">
+                <ol id="listSocial1">
+               
+              </ol>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal" onclick="window.location.reload();">Cerrar</button>
+                <button type="button" class="btn btn-primary" onclick="cargarLinks('.$idDoc.','.$id.')" id="btnGuardarSocial>">Agregar Link</button>
+              </div>
+            </div>
+          </div>
+        </div> 
+        
+        <!-- Modal editar links -->
+        <div class="modal fade" id="editarLinks'.$rowQuery['id'].'" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Editar <strong>'.$rowQuery['documento'].'</strong></h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="window.location.reload();"></button>
+              </div>
+              <div class="modal-body">
+              <input type="text" class="form-control mb-2" placeholder="Link social media" aria-label="Social media" aria-describedby="basic-addon1" id="editLinkSocial'.$idDoc .'">
+              <ol id="listSocial">
+               
+              </ol>
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-danger" data-bs-dismiss="modal" onclick="window.location.reload();">Cerrar</button>
+                <button type="button" class="btn btn-primary" onclick="editSocial('.$idDoc.','.$id.')" id="btnEditarSocial'.$idDoc.'">Guardar</button>
+              </div>
+            </div>
+          </div>
+        </div>
+              
     ';
 }
 

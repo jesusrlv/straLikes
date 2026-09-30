@@ -203,6 +203,95 @@ function editVideo(idDoc,idUsr){
 
 }
 
+function queryLinks(idUsr, idDoc){
+  var idD = idDoc;
+  var idU = idUsr;
+  $.ajax({
+    type: "POST",
+    url: 'query/links.php',
+    dataType:'html',
+    data:{
+        idD:idD,
+        idU:idU
+    },
+    success: function(data){
+      $('#listSocial').html(data);
+    }
+  });
+}
+
+function cargarLinks(idDoc,idUsr){
+  var link = document.getElementById('linkSocial'+idDoc).value;
+  var idD = idDoc;
+  var idU = idUsr;
+  $.ajax({
+    type: "POST",
+    url: 'prcd/upload_links.php',
+    dataType:'json',
+    data:{
+        idD:idD,
+        idU:idU,
+        link:link
+    },
+    success: function(response)
+    {
+        // document.getElementById('fileVideo'+idDoc).disabled=true;
+        // document.getElementById('btnGuardar'+idDoc).disabled=true;
+
+        var jsonData = JSON.parse(JSON.stringify(response));
+        var successLinks = jsonData.success;
+        if (successLinks == "1"){
+
+          Swal.fire({
+            icon: 'success',
+            imageUrl: '../../img/starlikes.png',
+            imageHeight: 400,
+            title: 'Link cargado',
+            text: 'Proceso correcto',
+            confirmButtonColor: '#3085d6',
+            footer: 'INJUVENTUD'
+
+        });
+      }
+
+    }
+});
+
+}
+
+function deleteLink(idDoc,idUsr){
+  var idD = idDoc;
+  var idU = idUsr;
+  $.ajax({
+    type: "POST",
+    url: 'prcd/delete_links.php',
+    dataType:'json',
+    data:{
+        idD:idD,
+        idU:idU
+    },
+    success: function(response)
+    {
+        let jsonData = JSON.parse(JSON.stringify(response));
+        let successLinks = jsonData.success;
+        if (successLinks == "1"){
+          Swal.fire({
+            icon: 'success',
+            imageUrl: '../../img/starlikes.png',
+            imageHeight: 400,
+            title: 'Link eliminado',
+            text: 'Proceso correcto',
+            confirmButtonColor: '#3085d6',
+            footer: 'INJUVENTUD'
+
+        });
+      }
+
+    }
+});
+
+}
+
 function contador(){
   var cont = document.getElementById('contarDocs').value;
 
