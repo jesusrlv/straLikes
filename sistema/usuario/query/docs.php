@@ -48,6 +48,11 @@ while($rowQuery = $resultadoQuery ->fetch_assoc()){
               <p class="text-center h1 h-50"><i class="bi bi-youtube"></i></p>
               ';
             }
+            else if($rowQuery['id']== 7){
+              echo'
+              <p class="text-center h1 h-50"><i class="bi bi-facebook"></i><i class="bi bi-tiktok"></i><i class="bi bi-instagram"></i></p>
+              ';
+            }
             else{
               echo'
               <p class="text-center h1 h-50"><i class="bi bi-filetype-pdf"></i></p>
@@ -62,6 +67,10 @@ while($rowQuery = $resultadoQuery ->fetch_assoc()){
               if($rowQuery['id']==9){
                 echo'
                 <a href="#" class="card-link text-light h6" style="text-decoration: none" data-bs-toggle="modal" data-bs-target="#cargarVideo'.$rowQuery['id'].'"><i class="bi bi-plus-circle"></i> Cargar video</a>';
+              }
+              else if($rowQuery['id']==7){
+                echo'
+                <a href="#" class="card-link text-light h6" style="text-decoration: none" data-bs-toggle="modal" data-bs-target="#cargarDoc'.$rowQuery['id'].'"><i class="bi bi-plus-circle"></i> Cargar links</a>';
               }
               else{
                 echo'
