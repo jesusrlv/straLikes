@@ -10,10 +10,22 @@ $noCatalogoquery = mysqli_num_rows($resultadoQuery);
 // while($rowQuery = $resultadoQuery ->fetch_assoc()){
 //     $idDoc = $rowQuery['id'];
     // query docs usr
-    $sqlDocs = "SELECT * FROM documentos WHERE id_ext = '$id'";
+    $sqlDocs = "SELECT * FROM documentos WHERE id_ext = '$id' AND documento != 7";
     $resultadoDocs = $conn -> query($sqlDocs);
-    $no_resultados = mysqli_num_rows($resultadoDocs);
-    
+    $no_resultadosX = mysqli_num_rows($resultadoDocs);
+
+    // links
+    $sqlLinks = "SELECT * FROM documentos WHERE id_ext = '$id' AND documento = 7";
+    $resultadoLinks = $conn -> query($sqlLinks);
+    $no_links = mysqli_num_rows($resultadoLinks);
+    if($no_links > 0){
+        $sumaLinks = 1;
+    }else{
+        $sumaLinks = 0;
+    }
+
+    $no_resultados = $no_resultadosX + $sumaLinks;
+
     $resultadoSuma = ($no_resultados * 100)/($noCatalogoquery);
     $porcentajeDocs = round($resultadoSuma);
         if($no_resultados == 0){
@@ -33,7 +45,7 @@ $noCatalogoquery = mysqli_num_rows($resultadoQuery);
             </div>
         ';
         }
-        else if($no_resultados == 1 || $no_resultados == 2 || $no_resultados == 3 || $no_resultados == 4 || $no_resultados == 5 || $no_resultados == 6 || $no_resultados == 7 || $no_resultados == 8|| $no_resultados == 9 || $no_resultados == 10 ){
+        else if($no_resultados == 1 || $no_resultados == 2 || $no_resultados == 3 || $no_resultados == 4 || $no_resultados == 5 || $no_resultados == 6 || $no_resultados == 7 || $no_resultados == 8|| $no_resultados == 9 ){
             echo '
             <div class="col">
                 <div class="card border-primary text-light" style="height:300px;background-color: rgba(228, 3, 125, 0.9);">
@@ -50,7 +62,7 @@ $noCatalogoquery = mysqli_num_rows($resultadoQuery);
             </div>
             ';
         }
-        else if($no_resultados == 11){
+        else if($no_resultados == 10){
             echo '
             <div class="col">
                 <div class="card border-success" style="height:300px; background-color: rgba(25, 155, 216, 0.9);">

@@ -224,6 +224,10 @@ function cargarLinks(idDoc,idUsr){
   var link = document.getElementById('linkSocial'+idDoc).value;
   var idD = idDoc;
   var idU = idUsr;
+  if(link == ""){
+    alert("El campo de link no puede estar vacío");
+    return false;
+  }
   $.ajax({
     type: "POST",
     url: 'prcd/upload_links.php',
@@ -253,6 +257,7 @@ function cargarLinks(idDoc,idUsr){
 
         });
 
+        document.getElementById('linkSocial'+idDoc).value = "";
         queryLinks(idUsr, idDoc);
       }
 
