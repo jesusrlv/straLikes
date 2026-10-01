@@ -215,7 +215,7 @@ function queryLinks(idUsr, idDoc){
         idU:idU
     },
     success: function(data){
-      $('#listSocial').html(data);
+      $('#listSocialMM1'+idDoc).fadeIn(1000).html(data);
     }
   });
 }
@@ -252,6 +252,8 @@ function cargarLinks(idDoc,idUsr){
             footer: 'INJUVENTUD'
 
         });
+
+        queryLinks(idUsr, idDoc);
       }
 
     }
@@ -285,6 +287,8 @@ function deleteLink(idDoc,idUsr){
             footer: 'INJUVENTUD'
 
         });
+
+        queryLinks(idUsr, idDoc);
       }
 
     }

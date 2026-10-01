@@ -80,7 +80,7 @@ while($rowQuery = $resultadoQuery ->fetch_assoc()){
             }
             else if($rowQuery['id']==7){
                 echo'
-            <a href="#" class="card-link text-light h6" style="text-decoration: none" data-bs-toggle="modal" data-bs-target="#editarLinks'.$rowQuery['id'].'" onclick="queryLinks('.$rowDocs['id_ext'].','.$idDoc.')"><i class="bi bi-pencil-square"></i> Editar links</a>
+            <a href="#" class="card-link text-light h6" style="text-decoration: none" data-bs-toggle="modal" data-bs-target="#cargarLinks'.$rowQuery['id'].'" onclick="queryLinks('.$rowDocs['id_ext'].','.$idDoc.')"><i class="bi bi-pencil-square"></i> Editar links</a>
             ';
             }
               else{
@@ -214,10 +214,10 @@ while($rowQuery = $resultadoQuery ->fetch_assoc()){
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" onclick="window.location.reload();"></button>
               </div>
               <div class="modal-body">
-                <input type="text" class="form-control mt-2" placeholder="Link social media" aria-label="Social media" aria-describedby="basic-addon1" id="linkSocial'.$idDoc.'">
-                <ol id="listSocial1">
+                <input type="text" class="form-control mb-3" placeholder="Link social media" aria-label="Social media" aria-describedby="basic-addon1" id="linkSocial'.$idDoc.'">
                
-              </ol>
+                <div id="listSocialMM1'.$idDoc.'"></div>  
+
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal" onclick="window.location.reload();">Cerrar</button>
@@ -237,9 +237,9 @@ while($rowQuery = $resultadoQuery ->fetch_assoc()){
               </div>
               <div class="modal-body">
               <input type="text" class="form-control mb-2" placeholder="Link social media" aria-label="Social media" aria-describedby="basic-addon1" id="editLinkSocial'.$idDoc .'">
-              <ol id="listSocial">
-               
-              </ol>
+              
+              <div id="listSocialMM1'.$idDoc.'"></div>
+              
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-danger" data-bs-dismiss="modal" onclick="window.location.reload();">Cerrar</button>

@@ -7,8 +7,10 @@
 
 $sqlSocial = "SELECT * FROM documentos WHERE id_ext = '$idUsr' AND documento = '$idDoc' ORDER BY id ASC";
 $resultadoSocial = $conn -> query($sqlSocial);
+echo'<ol>';
 while($rowSocial = $resultadoSocial ->fetch_assoc()){
     echo'
-    <li><a href="'.$rowSocial['link'].'" target="_blank">'.$rowSocial['link'].'</a> <button type="button" class="btn btn-sm btn-danger" onclick="deleteLink('.$rowSocial['id'].','.$idDoc.','.$idUsr.')"><i class="bi bi-trash"></i></button></li>
+    <li><i class="bi bi-link-45deg"></i> <a href="'.$rowSocial['link'].'" target="_blank">'.$rowSocial['link'].'</a> | <a href="#" onclick="deleteLink('.$rowSocial['id'].','.$idDoc.','.$idUsr.')"><i class="bi bi-trash-fill text-danger"></i></a></li>
     ';
 }
+echo'</ol>';
