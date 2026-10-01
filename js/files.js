@@ -318,19 +318,19 @@ function contador(){
 
   });
   }
-  else if(cont >= 0 & cont < 11){
+  else if(cont >= 0 & cont < 10){
     Swal.fire({
       icon: 'warning',
       imageUrl: '../../img/starlikes.png',
       imageHeight: 400,
       title: 'Tienes documentos pendientes por cargar',
-      html: 'Has cargado <b>'+cont+'</b> de 11 documentos para postularte a Starlikes.',
+      html: 'Has cargado <b>'+cont+'</b> de 10 documentos para postularte a Starlikes.',
       confirmButtonColor: '#3085d6',
       footer: 'INJUVENTUD'
 
     });
   }
-  else if(cont == 11){
+  else if(cont == 10){
 
     document.getElementById('constanciaP').hidden=false;
 
@@ -339,7 +339,7 @@ function contador(){
       imageUrl: '../../img/starlikes.png',
       imageHeight: 400,
       title: 'Proceso finalizado',
-      html: 'Has cargado los <strong>11 documentos</strong> para postularte a <strong>Starlikes</strong>. Ya puedes descargar la constancia de participación en la sección de Convocatoria.<p>Contesta una breve encuesta para ayudarnos a mejorar el sistema de postulación a Starlikes.</p><p><a href="https://forms.gle/iLMZR3EWTwvpPmA1A" target="_blank">Encuesta</a></p>',
+      html: 'Has cargado los <strong>10 documentos</strong> para postularte a <strong>Starlikes</strong>. Ya puedes descargar la constancia de participación en la sección de Convocatoria.<p>Contesta una breve encuesta para ayudarnos a mejorar el sistema de postulación a Starlikes.</p><p><a href="https://forms.gle/iLMZR3EWTwvpPmA1A" target="_blank">Encuesta</a></p>',
       confirmButtonColor: '#3085d6',
       footer: 'INJUVENTUD'
 
