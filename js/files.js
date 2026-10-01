@@ -261,22 +261,23 @@ function cargarLinks(idDoc,idUsr){
 
 }
 
-function deleteLink(idDoc,idUsr){
-  var idD = idDoc;
-  var idU = idUsr;
+function deleteLink(idUsr,idDoc,id){
+  
+  if(confirm("¿Estás seguro de que deseas eliminar este vehículo?")){
+  
   $.ajax({
     type: "POST",
     url: 'prcd/delete_links.php',
     dataType:'json',
     data:{
-        idD:idD,
-        idU:idU
+        id:id
     },
     success: function(response)
     {
         let jsonData = JSON.parse(JSON.stringify(response));
         let successLinks = jsonData.success;
-        if (successLinks == "1"){
+        if (successLinks == 1){
+          queryLinks(idUsr, idDoc);
           Swal.fire({
             icon: 'success',
             imageUrl: '../../img/starlikes.png',
@@ -286,13 +287,14 @@ function deleteLink(idDoc,idUsr){
             confirmButtonColor: '#3085d6',
             footer: 'INJUVENTUD'
 
-        });
-
-        queryLinks(idUsr, idDoc);
-      }
-
+          });
+        }
     }
-});
+  });
+  }
+  else{
+    alert("No se eliminó el link");
+  }
 
 }
 

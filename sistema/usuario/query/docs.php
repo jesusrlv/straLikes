@@ -63,7 +63,7 @@ while($rowQuery = $resultadoQuery ->fetch_assoc()){
               }
               else if($rowQuery['id']==7){
                 echo'
-                <a href="#" class="card-link text-light h6" style="text-decoration: none" data-bs-toggle="modal" data-bs-target="#cargarLinks'.$rowQuery['id'].'" onclick="queryLinks('.$rowDocs['id_ext'].','.$idDoc.')"><i class="bi bi-plus-circle"></i> Cargar links</a>';
+                <a href="#" class="card-link text-light h6" style="text-decoration: none" data-bs-toggle="modal" data-bs-target="#cargarLinks'.$rowQuery['id'].'" onclick="queryLinks('.$rowDocs['id_ext'].','.$idDoc.')"><i class="bi bi-plus-circle"></i> Agregar Links</a>';
               }
               else{
                 echo'
@@ -80,7 +80,7 @@ while($rowQuery = $resultadoQuery ->fetch_assoc()){
             }
             else if($rowQuery['id']==7){
                 echo'
-            <a href="#" class="card-link text-light h6" style="text-decoration: none" data-bs-toggle="modal" data-bs-target="#cargarLinks'.$rowQuery['id'].'" onclick="queryLinks('.$rowDocs['id_ext'].','.$idDoc.')"><i class="bi bi-pencil-square"></i> Editar links</a>
+            <a href="#" class="card-link text-light h6" style="text-decoration: none" data-bs-toggle="modal" data-bs-target="#cargarLinks'.$rowQuery['id'].'" onclick="queryLinks('.$rowDocs['id_ext'].','.$idDoc.')"><i class="bi bi-pencil-square"></i> Agregar Links</a>
             ';
             }
               else{
