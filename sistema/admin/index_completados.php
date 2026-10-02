@@ -217,7 +217,7 @@ $perfil = $_SESSION['perfil'];
       <div class="row">
         <div class="col-sm-3 col-md-6 col-lg-4 mt-2">
           <p class="mb-0 mt-1 text-center"><small>&copy; Desarrollo:<br> <strong class="text-light">Tecnologías de la Información | INJUVENTUD</strong></small></p>
-          <!-- <p class="mb-0 text-center"><small><a href="/" style="text-decoration: none;" class="text-light">Gobierno del estado de Zacatecas</a>.</small></p> -->
+          
         </div>
         <div class="col-sm-3 col-md-6 col-lg-4 mt-2 text-center">
           <img src="../../img/logo_white_02.png"  width="180" alt="">

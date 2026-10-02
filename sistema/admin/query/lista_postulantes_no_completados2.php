@@ -19,7 +19,7 @@ while($rowCategoria=$resultadoCategorias->fetch_assoc()){
         WHERE u.categoria = '$categoria' 
         AND u.perfil = 1
         GROUP BY u.id
-        HAVING COUNT(d.id_ext) < 11
+        HAVING COUNT(d.id_ext) < 10
     ";
     $resultCount = $conn->query($sqlCount);
     $total = $resultCount ? $resultCount->num_rows : 0;
@@ -81,7 +81,7 @@ while($rowCategoria=$resultadoCategorias->fetch_assoc()){
         $resultadoDoc = $conn->query($sqlDoc);
         $noDocs=$resultadoDoc->num_rows;
 
-        if($noDocs < 11){
+        if($noDocs < 10){
             $x++;
 
             echo '

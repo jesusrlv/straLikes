@@ -111,19 +111,6 @@ while($rowCategoria = $resultadoCategorias->fetch_assoc()){
                     <tbody class="text-center" id="myTable'.$i.'">
     ';
 
-    // QUERY PRINCIPAL (promedio)
-    // $sqlUsr = "
-    //     SELECT usr.id as id, usr.nombre as nombre, usr.curp as curp, 
-    //            usr.edad as edad, usr.municipio as municipio, usr.telefono as telefono, 
-    //            (SUM(calificacion.calificacion)/15) as promedio 
-    //     FROM usr 
-    //     INNER JOIN calificacion ON usr.id = calificacion.id_ext 
-    //     WHERE categoria = '$categoria' AND perfil = 1 
-    //     GROUP BY id 
-    //     ORDER BY promedio DESC
-    // ";
-    // $resultadoUsr = $conn->query($sqlUsr);
-    
     // Verificar si la consulta de usuarios falló
     if (!$resultadoUsr) {
         echo '<tr><td colspan="7">Error en consulta: ' . htmlspecialchars($conn->error) . '</td></tr>';
@@ -146,7 +133,7 @@ while($rowCategoria = $resultadoCategorias->fetch_assoc()){
         
         $noDocs = $resultadoDoc->num_rows;
 
-        if($noDocs == 11){
+        if($noDocs == 10){
 
             echo '
             <tr>
