@@ -109,15 +109,7 @@ include('query/name.php');
         white-space: nowrap;
         -webkit-overflow-scrolling: touch;
       }
-      /* buttons hover */
-
-      /* #botonesFiles:hover {
-    
-        box-shadow: 0 10px 20px rgba(0,0,0,.1), 0 4px 8px rgba(0,0,0,.06);
-        transform: scale(1.03);
-        transition: width 0.8s, height 0.8s, transform 0.3s;
-        
-      } */
+      
       .card{
         box-shadow: 0 6px 10px rgba(0,0,0,.08), 0 0 6px rgba(0,0,0,.05);
       }

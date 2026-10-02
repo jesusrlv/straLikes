@@ -20,7 +20,7 @@ while($rowDocs = $resultadoDocs->fetch_assoc()){
         <td><strong>'.$rowDocumento['documento'].'</strong></td>
         <td class="text-start">'.$rowDocumento['descripcion'].'</td>';
 
-        if($doc == 9){
+        if($doc == 9 || $doc == 7){
             echo ' <td><a href="'.$rowDocs['link'].'"><i class="bi bi-filetype-pdf h4"></i></a></td>';
         }
         else{
@@ -29,10 +29,10 @@ while($rowDocs = $resultadoDocs->fetch_assoc()){
 
        
         
-        echo'
-        <td>
-        ';
-    if($rowDocs['documento']==1 || $rowDocs['documento']==2 || $rowDocs['documento']==3 || $rowDocs['documento']==8 || $rowDocs['documento']==9){
+    echo'
+    <td>
+    ';
+    if($rowDocs['documento']==6 || $rowDocs['documento']==7 || $rowDocs['documento']==8 || $rowDocs['documento']==9){
         if(empty($rowCalif['calificacion'])){
 
         echo'
@@ -86,7 +86,7 @@ while($rowDocs = $resultadoDocs->fetch_assoc()){
         </td>
         <td>
             <span id="calificacionActual'.$rowDocs['documento'].'">';
-                if($rowDocs['documento']==1){
+                if($rowDocs['documento']==6){
                     $resultadoCon = $conn->query($calif);
                     $rowCon = $resultadoCon->fetch_assoc();
                     if(empty($rowCon['calificacion'])){
@@ -97,18 +97,7 @@ while($rowDocs = $resultadoDocs->fetch_assoc()){
                     }
 
                 }
-                else if($rowDocs['documento']==2){
-                    $resultadoCon = $conn->query($calif);
-                    $rowCon = $resultadoCon->fetch_assoc();
-                    if(empty($rowCon['calificacion'])){
-                        echo 'Sin calificar';
-                    }
-                    else{
-                    echo $rowCon['calificacion'];
-                    }
-
-                }
-                else if($rowDocs['documento']==3){
+                else if($rowDocs['documento']==7){
                     $resultadoCon = $conn->query($calif);
                     $rowCon = $resultadoCon->fetch_assoc();
                     if(empty($rowCon['calificacion'])){
@@ -126,7 +115,7 @@ while($rowDocs = $resultadoDocs->fetch_assoc()){
                         echo 'Sin calificar';
                     }
                     else{
-                    echo $rowCon['calificacion'];
+                        echo $rowCon['calificacion'];
                     }
 
                 }
@@ -137,24 +126,11 @@ while($rowDocs = $resultadoDocs->fetch_assoc()){
                         echo 'Sin calificar';
                     }
                     else{
-                    echo $rowCon['calificacion'];
+                        echo $rowCon['calificacion'];
                     }
 
                 }
-                // else if($rowDocs['documento']==9){
-                //     $idCon = $rowDocs['documento'];
-                //     $idExtCon = $rowDocs['id_ext'];
-                //     $jurado = $_SESSION['id'];
-                //     $docCon = "SELECT * FROM calificacion WHERE documento = 9 AND id_ext = '$idExtCon' AND id_jurado = '$jurado'";
-                //     $resultadoCon = $conn->query($docCon);
-                //     $rowCon = $resultadoCon->fetch_assoc();
-                //     if(empty($rowCon['calificacion'])){
-                //         echo 'Sin calificar';
-                //     }
-                //     else{
-                //     echo $rowCon['calificacion'];
-                //     }
-                // }
+                
                 else{
                     echo '---';
                 }

@@ -11,7 +11,7 @@ while($rowSQL = $resultadoSQL->fetch_assoc()){
     $resultadoContar = $conn->query($contador);
     $rowContar = $resultadoContar -> fetch_assoc();
     $numero = $rowContar['contar'];
-    if($numero == 11){
+    if($numero == 10){
         $calif = "SELECT * FROM calificacion WHERE id_ext = '$idDocs' AND id_jurado = '$id' ";
         $resultadoCalif = $conn->query($calif);
         $rowFila = $resultadoCalif->num_rows;
@@ -34,7 +34,7 @@ while($rowSQL = $resultadoSQL->fetch_assoc()){
             ';
         }else{
             echo'
-            <td>Migrante</td>';
+            <td>Sin municipio</td>';
         }
     echo'
         <td>'.$rowSQL['telefono'].'</td>
@@ -50,13 +50,13 @@ while($rowSQL = $resultadoSQL->fetch_assoc()){
             <span class="badge rounded-pill text-bg-warning">
             ';
         }
-        else if ($numero == 11){
+        else if ($numero == 10){
             echo'
             <span class="badge rounded-pill text-bg-primary">
             ';
         }
             echo'
-                Calificar los '.$numero.' documentos
+                Visualizar los '.$numero.' documentos
             </span>
             </a>
         </td>
@@ -72,29 +72,22 @@ while($rowSQL = $resultadoSQL->fetch_assoc()){
         	else if($rowFila == 1){
         	echo'
             <span class="badge rounded-pill text-bg-warning">
-        	<i class="bi bi-exclamation-circle-fill"></i> Falta calificar 4 documentos';
+        	<i class="bi bi-exclamation-circle-fill"></i> Falta calificar 3 documentos';
         	}
         	else if($rowFila == 2){
         	echo'
             <span class="badge rounded-pill text-bg-warning">
-        	<i class="bi bi-exclamation-circle-fill"></i> Falta calificar 3 documentos
+        	<i class="bi bi-exclamation-circle-fill"></i> Falta calificar 2 documentos
             </span>';
         	}
         	else if($rowFila == 3){
         	echo'
             <span class="badge rounded-pill text-bg-warning">
-        	<i class="bi bi-exclamation-circle-fill"></i> Falta calificar 2 documentos
+        	<i class="bi bi-exclamation-circle-fill"></i> Falta calificar 1 documentos
             </span>
             ';
         	}
         	else if($rowFila == 4){
-        	echo'
-            <span class="badge rounded-pill text-bg-warning">
-        	<i class="bi bi-exclamation-circle-fill"></i> Falta calificar 1 documento
-            </span>
-            ';
-        	}
-        	else if($rowFila == 5){
         	echo'
             <span class="badge rounded-pill text-bg-success">
         	<i class="bi bi-check-circle-fill"></i> Calificado
